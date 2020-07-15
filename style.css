@@ -1,0 +1,128 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+
+body {
+  background-image: linear-gradient(90deg red blue);
+  background-color: rgb(71, 67, 67);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 25px;
+  font-family: "Lato", sans-serif;
+}
+h1 {
+  display: flex;
+  color: aqua;
+  margin: 20px;
+  padding: 10px;
+  justify-content: center;
+  align-items: center;
+}
+.movie-container {
+  margin: 20px 0;
+}
+.movie-container select {
+  background: #fff;
+  border: 0;
+  border-radius: 5px;
+  font-size: 20px;
+  margin-left: 10px;
+  padding: 5px 5px 5px 5px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+.seat {
+  background: rgb(243, 239, 239);
+  height: 13px;
+  width: 12px;
+  margin: 10px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.row {
+  display: flex;
+}
+.seat:nth-of-type(4) {
+  margin-right: 40px;
+}
+.seat:nth-last-of-type(4) {
+  margin-left: 40px;
+}
+.seat.selected {
+  background: rgb(11, 177, 53);
+}
+.seat.occupied {
+  background: rgb(238, 8, 8);
+}
+
+.seat:not(.occupied):hover {
+  cursor: pointer;
+  transform: scale(1.9);
+}
+
+.showcase .seat:not(.occupied):hover {
+  cursor: default;
+  transform: scale(1);
+}
+
+.showcase {
+  background: rgba(0, 0, 0, 0.5);
+  padding: 5px 10px;
+  border-radius: 10px;
+  color: white;
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+}
+
+.showcase li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 25px;
+  padding: 2px;
+}
+
+.showcase li small {
+  margin-left: 5px;
+}
+
+.screen {
+  background: white;
+  height: 100px;
+  width: 100%;
+  margin: 10px 0;
+  transform: rotateX(-45deg);
+  box-shadow: 0 3px 10px rgba(255, 255, 255, 0.9);
+  color: rgb(255, 0, 51);
+}
+
+.container {
+  perspective: 1000px;
+  margin-bottom: 30px;
+}
+
+p.text {
+  margin: 10px 0;
+  font-size: 30px;
+}
+p.text span {
+  color: rgb(21, 250, 0);
+  font-size: 30px;
+}
+
+label {
+  font-size: 30px;
+}
+u {
+  background: #000;
+  color: red;
+}
